@@ -29,26 +29,23 @@
       <div class="right-image">
         <img src="./images/dice.gif" alt="dice" width="250" />
       </div>
-      <h3>Convert Fahrenheit to Celsius:
+      <h3>Select a number between 1-6:
         <br />
-        <br ?>
-        (32°F − 32) × 5/9 = 0°C
       </h3>
       <br />
       <div class="page-content-php">
         <br />
         <form action="answer.php" method="POST">
-          Fahrenheit:
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="fahrenheit">
-            <label class="mdl-textfield__label" for="fahrenheit">Enter a number ...</label>
+            <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="randomNumber">
+            <label class="mdl-textfield__label" for="randomNumber">Enter a number ...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
           <br />
           <br />
           <!-- Accent-colored raised button with ripple -->
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
-            Convert
+            Guess
           </button>
         </form>
       </div>
