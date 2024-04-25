@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Fahrenheit to Celsius, in PHP" />
+  <meta name="description" content="Number Guessing Game, in PHP" />
   <meta name="keywords" content="mths, ics2o" />
   <meta name="author" content="Nathan De Silva" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <title>Fahrenheit to Celsius, in PHP</title>
+  <title>Number Guessing Game, in PHP</title>
 </head>
 
 <body>
@@ -22,15 +22,15 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Fahrenheit to Celsius, in PHP</span>
+        <span class="mdl-layout-title">Number Guessing Game, in PHP</span>
       </div>
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/thermometer.png" alt="thermometer" width="250" />
+        <img src="./images/dice.gif" alt="dice" width="250" />
       </div>
       <div class="page-content-php">
-        <div name="fahrenheit-to-celsius">
+        <div name="randomNumber">
           <div class="mdl-layout__header-row">
             <br />
             <div class="mdl-layout__content">
@@ -38,18 +38,25 @@
             <div class="mdl-layout__left">
               <?php
 
+              $randomNumber = floor(rand() * 6) + 1;
+
               // input
-              $fahrenheit = $_POST["fahrenheit"];
+              $numberGuessed = $_POST ["guess"];
 
               // process
-              $celsius = ($fahrenheit - 32) * 5 / 9;
+              if ($numberGuessed == $randomNumber) {
 
               // output
-              echo "If the temperature in Fahrenheit is " . round($fahrenheit, 2) . "°F. ";
-              echo "<br />";
-              echo "<br />";
-              echo "Then the temperature in Celsius is: " . round($celsius, 2) . "°C. ";
-              echo "<br />";
+              echo "You guessed: " . $numberGuessed . ", and got the correct number which was: " . $randomNumber;
+              }
+
+              // process
+              if ($numberGuessed != $randomNumber) {
+
+                // output
+                echo "You guessed: " . $numberGuessed . ", ";
+                echo $randomNumber . "was the correct number.";
+              }
 
               ?>
             </div>

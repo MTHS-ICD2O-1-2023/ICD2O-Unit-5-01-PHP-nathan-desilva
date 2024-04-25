@@ -37,7 +37,7 @@
         <br />
         <form action="answer.php" method="POST">
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="randomNumber">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="randomNumber">
             <label class="mdl-textfield__label" for="randomNumber">Enter a number ...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
