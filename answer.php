@@ -30,7 +30,7 @@
         <img src="./images/dice.gif" alt="dice" width="250" />
       </div>
       <div class="page-content-php">
-        <div name="randomNumber">
+        <div name="number-guessed">
           <div class="mdl-layout__header-row">
             <br />
             <div class="mdl-layout__content">
@@ -38,24 +38,22 @@
             <div class="mdl-layout__left">
               <?php
 
-              $randomNumber = floor(rand() * 6) + 1;
+              if (isset($_POST["number-guessed"])) {
+                $randomNumber = floor(rand() * 6) + 1;
+                $numberGuessed = intval($_POST["number-guessed"]);
 
-              // input
-              $numberGuessed = $_POST ["guess"];
+                // process
+                if ($numberGuessed == $randomNumber) {
+                  // output
+                  echo "You guessed: " . $numberGuessed . ", and got the correct number which was: " . $randomNumber;
+                }
 
-              // process
-              if ($numberGuessed == $randomNumber) {
-
-              // output
-              echo "You guessed: " . $numberGuessed . ", and got the correct number which was: " . $randomNumber;
-              }
-
-              // process
-              if ($numberGuessed != $randomNumber) {
-
-                // output
-                echo "You guessed: " . $numberGuessed . ", ";
-                echo $randomNumber . "was the correct number.";
+                // process
+                if ($numberGuessed != $randomNumber) {
+                  // output
+                  echo "You guessed: " . $numberGuessed . ", ";
+                  echo $randomNumber . "was the correct number.";
+                }
               }
 
               ?>

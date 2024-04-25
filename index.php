@@ -30,15 +30,12 @@
         <img src="./images/dice.gif" alt="dice" width="250" />
       </div>
       <h3>Select a number between 1-6:
-        <br />
       </h3>
-      <br />
       <div class="page-content-php">
-        <br />
         <form action="answer.php" method="POST">
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="randomNumber">
-            <label class="mdl-textfield__label" for="randomNumber">Enter a number ...</label>
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="number-guessed">
+            <label class="mdl-textfield__label" for="number-guessed">Enter a number ...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
           <br />
