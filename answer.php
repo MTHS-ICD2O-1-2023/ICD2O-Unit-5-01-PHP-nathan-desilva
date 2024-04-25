@@ -46,7 +46,10 @@
                 if ($numberGuessed == $randomNumber) {
                   // output
                   echo "You guessed: " . $numberGuessed . ", and got the correct number which was: " . $randomNumber;
+                } else {
+                  echo "You guessed: " . $numberGuessed . ", and got the correct number which was: " . $randomNumber;
                 }
+
 
                 // process
                 if ($numberGuessed != $randomNumber) {
@@ -54,6 +57,9 @@
                   echo "You guessed: " . $numberGuessed . ", ";
                   echo $randomNumber . "was the correct number.";
                 }
+              } else {
+                echo "You guessed: " . $numberGuessed . ", ";
+                echo $randomNumber . "was the correct number.";
               }
 
               ?>
