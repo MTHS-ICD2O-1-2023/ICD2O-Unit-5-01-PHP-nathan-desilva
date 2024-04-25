@@ -56,11 +56,11 @@
                   // output
                   echo "You guessed: " . $numberGuessed . ", ";
                   echo $randomNumber . "was the correct number.";
-                }
-              } else {
+                } else {
                 echo "You guessed: " . $numberGuessed . ", ";
                 echo $randomNumber . "was the correct number.";
               }
+            }
 
               ?>
             </div>
