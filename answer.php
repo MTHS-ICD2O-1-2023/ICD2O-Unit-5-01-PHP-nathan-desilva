@@ -50,7 +50,6 @@
                   echo "You guessed: " . $numberGuessed . ", and got the correct number which was: " . $randomNumber;
                 }
 
-
                 // process
                 if ($numberGuessed != $randomNumber) {
                   // output
