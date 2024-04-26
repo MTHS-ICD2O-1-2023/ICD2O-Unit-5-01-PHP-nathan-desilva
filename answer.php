@@ -39,27 +39,22 @@
               <?php
 
               if (isset($_POST["number-guessed"])) {
-                $randomNumber = floor(rand() * 6) + 1;
+                $randomNumber = floor(rand(6,1));
                 $numberGuessed = intval($_POST["number-guessed"]);
 
                 // process
                 if ($numberGuessed == $randomNumber) {
                   // output
                   echo "You guessed: " . $numberGuessed . ", and got the correct number which was: " . $randomNumber;
-                } else {
-                  echo "You guessed: " . $numberGuessed . ", and got the correct number which was: " . $randomNumber;
-                }
-
+                } 
+                
                 // process
                 if ($numberGuessed != $randomNumber) {
                   // output
                   echo "You guessed: " . $numberGuessed . ", ";
-                  echo $randomNumber . "was the correct number.";
-                } else {
-                echo "You guessed: " . $numberGuessed . ", ";
-                echo $randomNumber . "was the correct number.";
+                  echo "the correct number was " . $randomNumber;
+                }
               }
-            }
 
               ?>
             </div>
